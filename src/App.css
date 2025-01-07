@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#root {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+#frase-fotos {
+  font-family: Cookie, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 25px;
+}
+
+#guarda-la-fecha,
+#retratos-de-amor,
+#medios-de-pago {
+  font-family: Cookie, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 35px;
+}
+
+#borde-circulo {
+  border-width: 0.5mm;
+  right: 5px;
+}
+
+#borde-circulo2 {
+  border-width: 0.5mm;
+  left: 5px;
+}
+
+#joelyzoe {
+  font-family: Fraunces;
+}
+
+#nombres {
+font-family: Fleur de Leah;
+}

@@ -1,0 +1,41 @@
+/*fraunces*/
+@import url('https://fonts.googleapis.com/css2?family=Capriola&family=Charm:wght@400;700&family=Cookie&family=Delius+Swash+Caps&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Gwendolyn:wght@400;700&family=Homemade+Apple&family=Kurale&family=Meow+Script&family=Ms+Madi&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@700&family=Princess+Sofia&family=Rochester&family=Sacramento&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Send+Flowers&family=Tangerine:wght@400;700&display=swap');
+/*Capriola, cuerpo general de la pagina*/
+@import url('https://fonts.googleapis.com/css2?family=Capriola&family=Charm:wght@400;700&family=Cookie&family=Delius+Swash+Caps&family=Gwendolyn:wght@400;700&family=Homemade+Apple&family=Kurale&family=Ms+Madi&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@700&family=Princess+Sofia&family=Rochester&family=Sacramento&family=Send+Flowers&family=Tangerine:wght@400;700&display=swap');
+/*cookie, letra cursiva para los detalles*/
+@import url('https://fonts.googleapis.com/css2?family=Capriola&family=Charm:wght@400;700&family=Cookie&family=Gwendolyn:wght@400;700&family=Homemade+Apple&family=Kurale&family=Ms+Madi&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@700&family=Princess+Sofia&family=Rochester&family=Send+Flowers&family=Tangerine:wght@400;700&display=swap');
+/*Fleur De Leah, tipografia para escribir joel y zoe*/
+@import url('https://fonts.googleapis.com/css2?family=Capriola&family=Charm:wght@400;700&family=Cookie&family=Delius+Swash+Caps&family=Fleur+De+Leah&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Gwendolyn:wght@400;700&family=Homemade+Apple&family=Kurale&family=Meow+Script&family=Ms+Madi&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@700&family=Princess+Sofia&family=Rochester&family=Sacramento&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Send+Flowers&family=Tangerine:wght@400;700&display=swap');
+
+
+:root {
+  font-family: Capriola, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #2c7932;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #2c7932;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}

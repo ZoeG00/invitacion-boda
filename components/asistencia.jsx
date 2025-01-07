@@ -20,7 +20,7 @@ export default function Asistencia() {
         <p className="text-gray-600 mx-14 text-center my-4" data-aos="zoom-out">
          Confirmar asistencia al: 
         </p>
-        <p className="text-gray-600 mx-14 text-center my-4" data-aos="zoom-in">
+        <p className="text-gray-600 mx-14 text-center my-4">
          +54 2634937329(Zoe) o  +54 2634223848(Joel)
         </p>
       </div>

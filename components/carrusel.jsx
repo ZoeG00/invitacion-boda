@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -14,25 +14,43 @@ import c10 from "../src/assets/carrousel/c10.webp";
 import c13 from "../src/assets/carrousel/c13.webp";
 
 export default function CarruselCircular() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [startX, setStartX] = useState(0);
+  const images = [c1, c2, c3, c4, c5, c6, c7, c9, c10, c13];
+  const totalImages = images.length;
+
+  const carouselRef = useRef(null);
+
   useEffect(() => {
     AOS.init({ duration: 5000 });
   }, []);
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [c1, c2, c3, c4, c5, c6, c7, c9, c10, c13];
-  const totalImages = images.length;
+  const handleTouchStart = (e) => {
+    setStartX(e.touches[0].clientX);
+  };
 
-  // Cambio automático de imagen cada 4 segundos
-  useEffect(() => {
-    const interval = setInterval(() => {
+  const handleTouchMove = (e) => {
+    const moveX = e.touches[0].clientX;
+    if (startX - moveX > 50) {
+      // Deslizar hacia la izquierda (next image)
       setCurrentIndex((prevIndex) => (prevIndex + 1) % totalImages);
-    }, 4000); // Cambia cada 4 segundos
+    } else if (moveX - startX > 50) {
+      // Deslizar hacia la derecha (previous image)
+      setCurrentIndex((prevIndex) => (prevIndex - 1 + totalImages) % totalImages);
+    }
+  };
 
-    return () => clearInterval(interval);
-  }, [totalImages]);
+  const handleTouchEnd = () => {
+    setStartX(0); // Resetea la posición inicial después del movimiento
+  };
 
   return (
-    <div className="relative w-full h-[600px] flex justify-center items-center bg-timberwolf overflow-hidden">
+    <div
+      className="relative w-full h-[600px] flex justify-center items-center bg-timberwolf overflow-hidden"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       {/* Título */}
       <p
         data-aos="zoom-in"
@@ -45,6 +63,7 @@ export default function CarruselCircular() {
       <div
         className="relative w-[800px] h-[500px] perspective bottom-10"
         style={{ perspective: "700px" }}
+        ref={carouselRef}
       >
         <div
           className="absolute w-full h-full flex items-center justify-center transition-transform duration-[1500ms] ease-out"
@@ -67,6 +86,7 @@ export default function CarruselCircular() {
                   src={image}
                   alt={`Imagen ${index + 1}`}
                   className="w-full h-full object-cover"
+                  loading="lazy" // Carga diferida de imágenes
                 />
               </div>
             );
@@ -78,7 +98,7 @@ export default function CarruselCircular() {
         id="frase-fotos"
         className="absolute mx-4 bottom-2 text-gray-600 italic text-center text-lg"
       >
-       &quot;Cada foto captura un momento único, un recuerdo que perdura en el
+        &quot;Cada foto captura un momento único, un recuerdo que perdura en el
         tiempo, un pedazo de nuestra historia que siempre llevaremos en el
         corazón.&quot;
       </p>

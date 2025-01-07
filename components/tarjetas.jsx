@@ -2,7 +2,7 @@ import { useState } from "react";
 import { TbPigMoney } from "react-icons/tb";
 import { FaMoneyBillTransfer } from "react-icons/fa6";
 import { FaCopy } from "react-icons/fa";
-import div from "../src/assets/elementos-graficos/divisor1.svg"
+import div from "../src/assets/elementos-graficos/divisor1.svg";
 
 export default function Tarjetas() {
   const divisor = div;
@@ -16,11 +16,11 @@ export default function Tarjetas() {
   };
 
   return (
-    <div className="relative flex flex-col items-center bg-timberwolf p-6 w-full h-full">
+    <div className="relative flex flex-col items-center bg-timberwolf p-8 w-full h-full">
       <div className="flex justify-center w-64 left-14 opacity-50 m-8">
-        <img src={divisor} />
+        <img src={divisor} alt="Divisor" />
       </div>
-      <p id="medios-de-pago" className=" text-pumpkin mb-5">
+      <p id="medios-de-pago" className="text-pumpkin mb-5 text-2xl font-semibold">
         Medios de pago
       </p>
       <p className="text-center mb-8 text-gray-600">
@@ -31,19 +31,19 @@ export default function Tarjetas() {
         ¡Gracias de corazón por ser parte de esta hermosa celebración y por
         ayudarnos a hacerla aún más memorable!
       </p>
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="flex flex-wrap justify-center gap-10">
         {/* Tarjeta 1 */}
-        <div className="w-full sm:w-80 p-6 bg-white shadow-lg rounded-lg">
-          <div className="border-2 border-dashed border-pumpkin rounded p-2 flex flex-col items-center">
+        <div className="w-full sm:w-80 p-6 bg-white shadow-xl rounded-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+          <div className="border-2 border-dashed border-pumpkin rounded-xl p-6 flex flex-col items-center">
             <TbPigMoney className="text-pumpkin text-4xl mb-4" />
             <h3 className="text-lg font-semibold text-gray-800">Efectivo</h3>
             <p className="text-gray-600 text-center mt-2">
               Una opción práctica y tradicional
             </p>
-            <div className="p-4 bg-gray-100 text-center">
+            <div className="p-4 text-center">
               <button
                 onClick={() => setIsModalOpen(true)} // Abrir modal
-                className=" text-pumpkin py-2 px-4 rounded-full hover:bg-orange-300 hover:scale-110 transition duration-300 border-2 border-pumpkin"
+                className="py-2 px-6 mt-4 rounded-full bg-armygreen text-white font-semibold transition duration-300 hover:bg-orange-500 transform hover:scale-110"
               >
                 Saber más
               </button>
@@ -52,8 +52,8 @@ export default function Tarjetas() {
         </div>
 
         {/* Tarjeta 2 */}
-        <div className="w-full sm:w-80 p-6 bg-white shadow-lg rounded-lg">
-          <div className="border-2 border-dashed border-pumpkin rounded p-3 flex flex-col items-center">
+        <div className="w-full sm:w-80 p-6 bg-white shadow-xl rounded-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+          <div className="border-2 border-dashed border-pumpkin rounded-xl p-6 flex flex-col items-center">
             <FaMoneyBillTransfer className="text-green-700 text-4xl mb-4" />
             <h3 className="text-lg font-semibold text-gray-800">
               Transferencia Bancaria
@@ -61,10 +61,10 @@ export default function Tarjetas() {
             <p className="text-gray-600 text-center mt-2">
               Una forma sencilla y cómoda
             </p>
-            <div className="p-4 bg-gray-100 text-center">
+            <div className="p-4 text-center">
               <button
                 onClick={() => setIsOpen(true)}
-                className=" text-pumpkin py-2 px-4 rounded-full hover:bg-orange-300 hover:scale-110 transition duration-300 border-2 border-pumpkin"
+                className="py-2 px-6 mt-4 rounded-full bg-armygreen text-white font-semibold transition duration-300 hover:bg-orange-500 transform hover:scale-110"
               >
                 Saber más
               </button>
@@ -80,7 +80,7 @@ export default function Tarjetas() {
           onClick={() => setIsModalOpen(false)} // Cerrar modal al hacer clic fuera
         >
           <div
-            className="bg-white p-6 rounded-lg shadow-lg w-80"
+            className="bg-white p-6 rounded-xl shadow-2xl w-80"
             onClick={(e) => e.stopPropagation()} // Prevenir cierre al hacer clic dentro
           >
             <h2 className="text-lg font-semibold text-pumpkin">
@@ -96,7 +96,7 @@ export default function Tarjetas() {
               <span>Para niños, el costo es de $26.000 (4-10 años)</span>
             </p>
             <button
-              className="mt-4 text-pumpkin py-2 px-4 rounded-full hover:bg-orange-300 transition duration-300 border-2 border-pumpkin"
+              className="mt-4 text-pumpkin py-2 px-6 rounded-full border-2 border-pumpkin hover:bg-orange-300 transition duration-300"
               onClick={() => setIsModalOpen(false)} // Cerrar modal
             >
               Cerrar
@@ -112,23 +112,19 @@ export default function Tarjetas() {
           onClick={() => setIsOpen(false)} // Cerrar modal al hacer clic fuera
         >
           <div
-            className="bg-white p-6 rounded-lg shadow-lg w-80"
+            className="bg-white p-6 rounded-xl shadow-2xl w-80"
             onClick={(e) => e.stopPropagation()} // Prevenir cierre al hacer clic dentro
           >
             <h2 className="text-lg font-semibold text-pumpkin">
               Más sobre Transferencia
             </h2>
             <p className="text-gray-600 mt-4 flex flex-col">
-              <span>
-                El costo de la tarjeta es de $45.000
-              </span>
+              <span>El costo de la tarjeta es de $45.000</span>
               <span>
                 El mismo puede dividirse en 2 pagos de $22.500 cada uno
               </span>
               <span>Para niños, el costo es de $26.000 (4-10 años)</span>
-              <span className="text-pumpkin">
-                Datos para la transferencia
-              </span>
+              <span className="text-pumpkin">Datos para la transferencia</span>
               <span className="flex items-center mx-16 gap-2">
                 Alias: joelyzoe
                 <FaCopy
@@ -148,7 +144,7 @@ export default function Tarjetas() {
               <span>Zoe Valentina Guzman</span>
             </p>
             <button
-              className="mt-4 text-pumpkin py-2 px-4 rounded-full hover:bg-orange-300 transition duration-300 border-2 border-pumpkin"
+              className="mt-4 text-pumpkin py-2 px-6 rounded-full border-2 border-pumpkin hover:bg-orange-300 transition duration-300"
               onClick={() => setIsOpen(false)} // Cerrar modal
             >
               Cerrar

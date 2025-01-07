@@ -1,9 +1,11 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import div from "../src/assets/elementos-graficos/divisor1.svg"
 
 
 export default function Asistencia() {
+  const divisor = div;
     useEffect(() => {
         AOS.init({ duration: 5000 });
       }, []);
@@ -11,7 +13,7 @@ export default function Asistencia() {
       <div className= "bg-timberwolf flex flex-col items-center py-8">
         {/* Divisor superior */}
         <div className="flex justify-center w-64 opacity-50 my-4">
-          <img src="../src/assets/elementos-graficos/divisor1.svg" alt="Divisor" />
+          <img src={divisor} alt="Divisor" />
         </div>
   
         {/* Frase principal */}

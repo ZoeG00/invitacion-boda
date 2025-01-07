@@ -2,8 +2,10 @@ import { useState } from "react";
 import { TbPigMoney } from "react-icons/tb";
 import { FaMoneyBillTransfer } from "react-icons/fa6";
 import { FaCopy } from "react-icons/fa";
+import div from "../src/assets/elementos-graficos/divisor1.svg"
 
 export default function Tarjetas() {
+  const divisor = div;
   const [isModalOpen, setIsModalOpen] = useState(false); // Estado del modal
   const [isOpen, setIsOpen] = useState(false); // Estado del modal
 
@@ -16,7 +18,7 @@ export default function Tarjetas() {
   return (
     <div className="relative flex flex-col items-center bg-timberwolf p-6 w-full h-full">
       <div className="flex justify-center w-64 left-14 opacity-50 m-8">
-        <img src="../src/assets/elementos-graficos/divisor1.svg" />
+        <img src={divisor} />
       </div>
       <p id="medios-de-pago" className=" text-pumpkin mb-5">
         Medios de pago

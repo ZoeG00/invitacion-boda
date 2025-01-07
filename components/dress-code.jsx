@@ -2,8 +2,10 @@ import { GiClothes } from "react-icons/gi";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import div from "../src/assets/elementos-graficos/divisor1.svg"
 
 export default function DressCode() {
+   const divisor = div;
   useEffect(() => {
     AOS.init({ duration: 5000 });
   }, []);
@@ -14,7 +16,7 @@ export default function DressCode() {
       <div
         className="flex justify-center w-64 left-14 opacity-50 m-8"
       >
-        <img src="../src/assets/elementos-graficos/divisor1.svg" alt="Divisor" />
+        <img src={divisor} alt="Divisor" />
       </div>
 
       {/* Card Header con animación */}

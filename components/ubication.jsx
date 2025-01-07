@@ -2,8 +2,10 @@ import confetti from "canvas-confetti";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import div from "../src/assets/elementos-graficos/divisor1.svg"
 
 export default function Ubicacion() {
+    const divisor = div;
   // Función para lanzar serpentinas
   const lanzarSerpentinas = () => {
     console.log("Botón presionado"); // Verifica en la consola
@@ -22,7 +24,7 @@ export default function Ubicacion() {
   return (
     <div className="relative w-full h-full flex items-center justify-center bg-timberwolf flex-col">
       <div className="flex justify-center w-64  left-14 opacity-50 m-8">
-        <img src="../src/assets/elementos-graficos/divisor1.svg" />
+        <img src={divisor} />
       </div>
       {/* Título */}
       <p
@@ -84,7 +86,7 @@ export default function Ubicacion() {
         </a>
       </button>
       <div className="flex justify-center w-64  left-14 opacity-50 m-8">
-        <img src="../src/assets/elementos-graficos/divisor1.svg" />
+        <img src={divisor} />
       </div>
     </div>
   );

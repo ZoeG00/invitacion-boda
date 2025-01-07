@@ -1,6 +1,7 @@
 //estilos
 import "./App.css";
 import AOS from "aos";
+import c11 from "../src/assets/carrousel/c11.webp"
 
 //importación de cada componente
 import NosCasamos from "../components/nos-casamos";
@@ -18,6 +19,7 @@ import Asistencia from "../components/asistencia";
 import { useState, useEffect } from "react";
 
 const Countdown = ({ targetDate }) => {
+  const imagen = c11;
   const [timeLeft, setTimeLeft] = useState({});
 
   useEffect(() => {
@@ -56,7 +58,7 @@ const Countdown = ({ targetDate }) => {
   return (
     <div className=" h-full w-full relative bg-black">
       <img
-        src="../src/assets/carrousel/c11.jpg"
+        src={imagen}
         className="w-full opacity-50"
       />
       <div className="absolute text-3xl flex justify-center items-center h-full w-full bottom-2 left-0">

@@ -28,11 +28,6 @@ export default function Regalo() {
       <p id="frase-fotos" className="text-armygreen text-center my-4" data-aos="zoom-in">
         Joel & Zoe
       </p>
-
-      {/* Divisor inferior */}
-      <div className="flex justify-center w-64 opacity-50 my-4">
-        <img src={divisor} alt="Divisor" />
-      </div>
     </div>
   );
 }

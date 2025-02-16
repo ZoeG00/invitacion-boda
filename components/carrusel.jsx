@@ -42,14 +42,14 @@ export default function CarruselCircular() {
       <p
         data-aos="zoom-in"
         id="retratos-de-amor"
-        className="absolute top-2 text-3xl font-bold text-pumpkin text-center"
+        className="absolute top-2 text-3xl font-bold text-timberwolf text-center bg-armygreen px-10"
       >
         Retratos de nuestro amor
       </p>
 
       {/* Carrusel en forma de círculo */}
       <div
-        className="relative w-[800px] h-[500px] perspective bottom-10"
+        className="relative w-[800px] h-[500px] perspective"
         style={{ perspective: "700px" }}
       >
         <div
@@ -100,9 +100,7 @@ export default function CarruselCircular() {
         id="frase-fotos"
         className="absolute mx-4 bottom-2 text-gray-600 italic text-center text-lg"
       >
-        &quot;Cada foto captura un momento único, un recuerdo que perdura en el
-        tiempo, un pedazo de nuestra historia que siempre llevaremos en el
-        corazón.&quot;
+        &quot;Cada foto es un recuerdo que siempre llevaremos en el corazón&quot;
       </p>
     </div>
   );

@@ -1,18 +1,18 @@
 import { useEffect } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css"
+import "aos/dist/aos.css";
 
 export default function Frase() {
-   useEffect(() => {
-      AOS.init({ duration: 5000 });
-    }, []);
-  
+  useEffect(() => {
+    AOS.init({ duration: 5000 });
+  }, []);
+
   return (
     <div className="bg-armygreen flex flex-col items-center justify-center px-4 py-8">
       {/* Botón central */}
-      <div className="relative py-10 text-center mb-8" >
+      <div className="relative py-10 text-center mb-8">
         <button
-        data-aos="fade-up"
+          data-aos="fade-up"
           id="joelyzoe"
           className="relative flex items-center justify-center text-white transition-transform w-40 h-40"
         >
@@ -46,13 +46,10 @@ export default function Frase() {
       {/* Texto debajo del botón */}
       <div className="max-w-3xl text-center">
         <p id="frase-fotos" className="text-timberwolf text-lg leading-relaxed">
-          Nos encantaría que seas parte de este día tan especial en nuestras
-          vidas, un momento único en el que celebramos nuestra historia, el
-          compromiso que nos une y los sueños que juntos estamos construyendo.
-          Acompáñanos a compartir esta jornada tan esperada, donde rodeados de
-          las personas que más queremos, daremos inicio a una nueva etapa
-          juntos. ¡Te esperamos con los brazos abiertos para celebrar nuestra
-          boda y crear recuerdos inolvidables!
+          Nos encantaría que seas parte de este día especial, celebrando nuestro
+          amor y el compromiso que nos une. Acompáñanos en esta nueva etapa
+          rodeados de quienes más queremos. ¡Te esperamos para crear recuerdos
+          inolvidables!
         </p>
       </div>
     </div>

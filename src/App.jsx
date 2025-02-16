@@ -36,7 +36,9 @@ const Countdown = React.memo(({ targetDate }) => {
 
       setTimeLeft({
         days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        hours: Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        ),
         minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
         seconds: Math.floor((distance % (1000 * 60)) / 1000),
       });
@@ -45,7 +47,7 @@ const Countdown = React.memo(({ targetDate }) => {
     return () => clearInterval(interval); // Limpiar el intervalo al desmontar
   }, [targetDate]);
 
- /* if (!timeLeft.days && !timeLeft.hours && !timeLeft.minutes && !timeLeft.seconds) {
+  /* if (!timeLeft.days && !timeLeft.hours && !timeLeft.minutes && !timeLeft.seconds) {
     return <p>¡El gran día ha llegado!</p>;
   } */
 
@@ -91,7 +93,7 @@ const Countdown = React.memo(({ targetDate }) => {
 });
 
 function App() {
-  const weddingDate = new Date("2025-04-12T13:00:00").getTime();
+  const weddingDate = new Date("2025-06-07T13:00:00").getTime();
 
   return (
     <Suspense fallback={<div>Loading...</div>}>

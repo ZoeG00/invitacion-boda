@@ -19,7 +19,7 @@ export default {
       colors: {
         armygreen: "#606C38",
         tofee: "#C2803A",
-        timberwolf: "#D1CDC4",
+        timberwolf: "#FFFDD0",
         nutmeg: "#7A402E",
         pumpkin: "#C2803A",
         squash: "#2F4D49",

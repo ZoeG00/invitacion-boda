@@ -4,27 +4,26 @@
 
 html,
 body {
-  overflow-x: hidden;
+overflow-x: hidden;
   margin: 0;
   padding: 0;
   width: 100%;
 }
 
 #root {
-  overflow-x: hidden;
   width: 100%;
   max-width: 100%;
 }
 
 #frase-fotos {
-  font-family: Cookie, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Cookie;
   font-size: 25px;
 }
 
 #guarda-la-fecha,
 #retratos-de-amor,
 #medios-de-pago {
-  font-family: Cookie, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Cookie;
   font-size: 35px;
 }
 

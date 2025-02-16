@@ -12,6 +12,8 @@
   "dependencies": {
     "aos": "^2.3.4",
     "canvas-confetti": "^1.9.3",
+    "invitacion-boda": "file:",
+    "motion": "^12.4.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0"

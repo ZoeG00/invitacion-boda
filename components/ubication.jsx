@@ -17,7 +17,7 @@ export default function Ubicacion() {
   };
 
   useEffect(() => {
-    AOS.init({ duration: 2000 });
+    AOS.init({ duration: 2000});
   }, []);
 
   return (
@@ -43,7 +43,7 @@ export default function Ubicacion() {
         >
           <i className="fas fa-calendar-alt text-pumpkin text-4xl mb-4"></i>
           <h2 className="text-xl font-semibold text-armygreen">Fecha</h2>
-          <p className="text-lg text-gray-700 mt-2">12 de abril de 2025</p>
+          <p className="text-lg text-gray-700 mt-2">7 de junio de 2025</p>
           <button
             onClick={lanzarSerpentinas}
             className="mt-4 px-4 py-2 bg-armygreen text-white rounded-full hover:bg-green-800 transition-all"
@@ -85,7 +85,7 @@ export default function Ubicacion() {
           <i className="fas fa-map-marker-alt text-pumpkin text-4xl mb-4"></i>
           <h2 className="text-xl font-semibold text-armygreen">Lugar</h2>
           <p className="text-lg text-gray-700 mt-2">Finca La Mariana</p>
-          <p className="text-sm text-gray-500 mt-1">La Junta S/N, M5570</p>
+          <p className="text-sm text-gray-500 mt-1">La Junta S/N, San Martín</p>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3342.3716573423167!2d-68.4080408!3d-33.0993117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0b243163de75%3A0x3ec1a576bd118f0d!2sFinca%20La%20Mariana!5e0!3m2!1ses!2sar!4v1734469897103!5m2!1ses!2sar"
             width="100%"
@@ -109,9 +109,7 @@ export default function Ubicacion() {
           id="frase-fotos"
           className=" text-gray-500 flex justify-center items-center w-full"
         >
-          Cada momento cuenta en este día tan especial. ¡Te esperamos puntual
-          para que juntos podamos vivir la emoción desde el inicio! No llegues
-          tarde, queremos disfrutar contigo cada segundo.
+          Cada momento cuenta. ¡Llega puntual para compartir la emoción desde el principio!
         </p>
       </div>
 

@@ -18,11 +18,8 @@ export default {
     extend: {
       colors: {
         armygreen: "#606C38",
-        tofee: "#C2803A",
         timberwolf: "#E0E0BD",
-        nutmeg: "#7A402E",
         pumpkin: "#C2803A",
-        squash: "#2F4D49",
       },
       animation: {
         "fade-in": "fadeIn 1s ease-in-out",
